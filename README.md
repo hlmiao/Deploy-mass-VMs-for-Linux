@@ -1,1 +1,17 @@
-# Deploy-mass-VMs-for-Linux
+使用说明：
+1、必须先创建Linux模板，必须安装vmtools
+2、必须先创建对应的“自定义规范管理”（OS Customization Specification）
+$OSspec = "powercli-Linux"，为自定义规范管理的名称
+1）创建时计算机名称必须选择“使用虚拟机名称”
+2）Linux需要预先配置DNS
+3、如果部署时使用Storage DRS，必须预先启用该功能
+4、建议一次部署CSV定义的虚拟机数量不要超过5个
+
+功能限制：
+1、对虚拟机vCPU配置，只能定义“虚拟插槽数”，无法定义“每个插槽的内核数”
+2、当前只支持每台虚拟机配置一个网卡IP地址，但可以创建两块网卡
+3、当前只支持每台虚拟机配置三块磁盘
+4、Linux扩展磁盘和新建磁盘，并不会加入到原root vg里，需要手工配置
+
+CSV编辑注意事项：
+1、“NetworkName”必须匹配大小写
