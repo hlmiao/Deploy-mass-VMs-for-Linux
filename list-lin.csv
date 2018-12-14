@@ -1,0 +1,4 @@
+VMName,Cluster,Location,ClusterDatastore,MemoryGB,NumCpu,Osdisk,Disk2,Disk3,Template,NetworkName,NetworkName2,IPaddress,Netmask,Gateway,Description
+p-Linux001,DC01-Cluster,template-powercli,SSD_wanning,2,4,30,,,linux-base,VM Network 125,,192.168.1.100,255.255.255.0,192.168.1.1,linux test1
+p-Linux002,DC01-Cluster,template-powercli,SSD_wanning,1,2,20,5,,linux-base,VM Network,22.14.71.0/24,192.168.1.101,255.255.255.0,192.168.1.1,linux test2
+p-Linux003,DC01-Cluster,template-powercli,SSD_wanning,1,8,25,2,5,linux-base,VM Network,22.14.55.0/24,192.168.1.102,255.255.255.0,192.168.1.1,linux test3
